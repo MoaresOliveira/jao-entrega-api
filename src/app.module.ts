@@ -3,7 +3,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { PedidosModule } from './modules/pedidos/pedidos.module';
 import { Produto } from './modules/produtos/entities/produto.entity';
 import { ProdutosModule } from './modules/produtos/produtos.module';
 
@@ -15,7 +14,6 @@ import { ProdutosModule } from './modules/produtos/produtos.module';
       entities: [Produto], // Liste aqui suas entidades
       synchronize: true, // Apenas para desenvolvimento, sincroniza automaticamente as entidades com o banco de dados
     }),
-    PedidosModule,
     ProdutosModule,
   ],
   controllers: [AppController],
